@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./OwnersSection.module.css";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { translations } from "../../translations/translations";
-import presidentImage from "../../images/owner.png";
+import presidentImage from "../../images/owner.jpeg";
 
 const OwnersSection = () => {
   const { language } = useLanguage();

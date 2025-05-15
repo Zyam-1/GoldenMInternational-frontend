@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap");
+
+.container {
+    font-family: "Barlow", sans-serif;
+    background-color: #2d2e33; /* Dark gray background matching the image */
+    color: white;
+    padding: 5rem 2rem;
+    width: 100%;
+}
+
+/* Title Styles */
+.titleWrapper {
+    max-width: 1400px;
+    margin: 0 auto 3rem;
+}
+
+.sectionTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+    color: white;
+}
+
+.sectionTitle::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 2rem;
+    height: 1px;
+    background-color: white;
+    transform: translateX(-3rem);
+}
+
+/* Stats Grid */
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Stat Item */
+.statItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.statValue {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 1rem;
+    color: #ffc72c; /* Golden yellow color matching the image */
+}
+
+.statLabel {
+    font-size: 1.125rem;
+    font-weight: 400;
+    max-width: 90%;
+    line-height: 1.4;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem 2rem;
+    }
+
+    .statValue {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .statsGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .container {
+        padding: 4rem 1.5rem;
+    }
+
+    .sectionTitle::before {
+        width: 1.5rem;
+        transform: translateX(-2.5rem);
+    }
+
+    .statValue {
+        font-size: 3.5rem;
+    }
+
+    .statLabel {
+        font-size: 1rem;
+    }
+}

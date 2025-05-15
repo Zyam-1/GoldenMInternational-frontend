@@ -1,0 +1,311 @@
+/*
+Author: Z. Maqsood
+Date: 10-04-2025 */
+
+.container {
+    font-family: "Barlow", sans-serif;
+    background-color: #222222;
+    color: white;
+    padding: 2rem 0;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.contentWrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.line {
+    width: 3rem;
+    height: 2px;
+    background-color: white;
+    margin-right: 1rem;
+}
+
+.subtitle {
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    line-height: 1.1;
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+
+.title.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    opacity: 0.8;
+}
+
+.locationTabs {
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 1rem;
+}
+
+.locationTab {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.locationTab::after {
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #ffdea4;
+    transition: width 0.3s ease;
+}
+
+.locationTab.active {
+    color: white;
+}
+
+.locationTab.active::after {
+    width: 100%;
+}
+
+.mapSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.mapWrapper {
+    position: relative;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.8s ease 0.3s,
+        transform 0.8s ease 0.3s;
+}
+
+.mapWrapper.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.map {
+    position: relative;
+    width: 70%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-bottom: 80%; /* Aspect ratio for the map */
+}
+
+.mapOutline {
+    position: absolute;
+    /* z-index: 0; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.dot {
+    position: absolute;
+    z-index: 1;
+    width: 10px;
+    height: 10px;
+    background-color: #ffdea4;
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 0;
+    transition:
+        transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        opacity 0.5s ease;
+    box-shadow: 0 0 10px rgba(255, 222, 164, 0.7);
+    /* background-color: red; */
+}
+
+.dot.visible {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.dot:hover {
+    transform: scale(1.5);
+    box-shadow: 0 0 15px rgba(255, 222, 164, 0.9);
+}
+
+.statsSection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.8s ease 0.5s,
+        transform 0.8s ease 0.5s;
+}
+
+.statsSection.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.statNumber {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffdea4;
+    line-height: 1;
+}
+
+.statDescription {
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    opacity: 0.8;
+}
+
+.buttonWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 0.5rem;
+}
+
+.officesButton {
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 0.75rem 1.5rem;
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.officesButton:hover {
+    background-color: #ffdea4;
+    color: #222222;
+    border-color: #ffdea4;
+}
+
+.officesDescription {
+    font-size: 0.875rem;
+    color: white;
+    opacity: 0.7;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+    .contentWrapper {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 3rem;
+    }
+
+    .textContent {
+        flex: 0 0 40%;
+    }
+
+    .mapSection {
+        flex: 0 0 60%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mapWrapper {
+        flex: 0 0 60%;
+    }
+
+    .statsSection {
+        flex: 0 0 35%;
+        margin-top: 0;
+    }
+
+    .stat {
+        text-align: left;
+    }
+
+    .buttonWrapper {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 767px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .mapWrapper {
+        max-width: 100%;
+    }
+
+    .map {
+        width: 100%;
+        padding-bottom: 100%;
+    }
+
+    .statsSection {
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .statNumber {
+        font-size: 2.5rem;
+    }
+
+    .contentWrapper {
+        padding: 1.5rem 1rem;
+    }
+}

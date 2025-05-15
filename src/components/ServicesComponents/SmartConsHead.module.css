@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap");
+
+.container {
+    font-family: "Barlow", sans-serif;
+    padding: 6rem 2rem;
+    background-color: white;
+    overflow: hidden;
+}
+
+.content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 4rem;
+}
+
+/* Left Column */
+.leftColumn {
+    flex: 1;
+    position: relative;
+}
+
+.accentLine {
+    width: 2.5rem;
+    height: 2px;
+    background-color: #ffc72c; /* Golden yellow accent color */
+    margin-bottom: 2rem;
+}
+
+.headerWrapper,
+.titleWrapper,
+.descriptionWrapper,
+.innovationTitleWrapper {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.headerWrapper.visible,
+.titleWrapper.visible,
+.descriptionWrapper.visible,
+.innovationTitleWrapper.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.serviceHeader {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.serviceTitle {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    color: #000;
+}
+
+.serviceDescription {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 4rem;
+    color: #333;
+    max-width: 90%;
+}
+
+.overviewWrapper {
+    margin-bottom: 2rem;
+}
+
+.overviewHeader {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.overviewBar {
+    width: 2rem;
+    height: 4px;
+    background-color: #004d33; /* Dark green color */
+}
+
+.innovationTitle {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #000;
+    max-width: 90%;
+}
+
+/* Right Column */
+.rightColumn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.imageWrapper {
+    width: 100%;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.imageWrapper.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.serviceImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.innovationTextWrapper,
+.innovationLabelWrapper {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.innovationTextWrapper.visible,
+.innovationLabelWrapper.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.innovationText {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.innovationLabelWrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.innovationLabel {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #004d33; /* Dark green color */
+}
+
+.innovationLine {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #004d33; /* Dark green color */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .serviceTitle {
+        font-size: 3rem;
+    }
+
+    .innovationTitle {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .content {
+        gap: 3rem;
+    }
+
+    .serviceTitle {
+        font-size: 2.5rem;
+    }
+
+    .innovationTitle {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 4rem 2rem;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .serviceTitle {
+        font-size: 2.25rem;
+    }
+
+    .serviceDescription,
+    .innovationText {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .innovationTitle {
+        font-size: 1.5rem;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 3rem 1.5rem;
+    }
+
+    .serviceTitle {
+        font-size: 2rem;
+    }
+
+    .accentLine {
+        width: 2rem;
+        margin-bottom: 1.5rem;
+    }
+}

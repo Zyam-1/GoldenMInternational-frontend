@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap");
+
+.headerContainer {
+    position: relative;
+    font-family: "Barlow", sans-serif;
+    padding: 80px 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    margin-top: 5rem;
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.headerContainer.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.titleLine {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.line {
+    width: 50px;
+    height: 2px;
+    background-color: #ffcc00;
+    margin-right: 20px;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.description {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.decorativeElements {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    z-index: 1;
+}
+
+.yellowTriangle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 200px 200px 0;
+    border-color: transparent #ffcc00 transparent transparent;
+}
+
+.greenTriangle {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background-color: #004d33;
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+.yellowRectangle {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background-color: #ffcc00;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .decorativeElements {
+        width: 250px;
+        height: 250px;
+    }
+
+    .yellowTriangle {
+        border-width: 0 150px 150px 0;
+    }
+
+    .greenTriangle,
+    .yellowRectangle {
+        width: 150px;
+        height: 150px;
+        top: 80px;
+    }
+}
+
+@media (max-width: 992px) {
+    .headerContainer {
+        padding: 60px 0;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .decorativeElements {
+        width: 200px;
+        height: 200px;
+    }
+
+    .yellowTriangle {
+        border-width: 0 120px 120px 0;
+    }
+
+    .greenTriangle,
+    .yellowRectangle {
+        width: 120px;
+        height: 120px;
+        top: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .headerContainer {
+        padding: 50px 0;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .decorativeElements {
+        width: 150px;
+        height: 150px;
+    }
+
+    .yellowTriangle {
+        border-width: 0 100px 100px 0;
+    }
+
+    .greenTriangle,
+    .yellowRectangle {
+        width: 100px;
+        height: 100px;
+        top: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .headerContainer {
+        padding: 40px 0;
+    }
+
+    .titleLine {
+        margin-bottom: 20px;
+    }
+
+    .line {
+        width: 30px;
+        margin-right: 15px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .decorativeElements {
+        width: 120px;
+        height: 120px;
+    }
+
+    .yellowTriangle {
+        border-width: 0 80px 80px 0;
+    }
+
+    .greenTriangle,
+    .yellowRectangle {
+        width: 80px;
+        height: 80px;
+        top: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .decorativeElements {
+        width: 100px;
+        height: 100px;
+    }
+
+    .yellowTriangle {
+        border-width: 0 60px 60px 0;
+    }
+
+    .greenTriangle,
+    .yellowRectangle {
+        width: 60px;
+        height: 60px;
+        top: 30px;
+    }
+}

@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap");
+
+.footer {
+    width: 100%;
+    font-family: "Barlow";
+    background-color: #fff;
+    border-top: 4px solid #007749;
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.topSection {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.linksSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.linkColumn {
+    min-width: 140px;
+}
+
+.footerLink {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.footerLink:hover {
+    color: #007749;
+}
+
+.footerLink:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: -4px;
+    left: 0;
+    background-color: #007749;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.footerLink:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.socialIcons {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    transition:
+        color 0.3s ease,
+        transform 0.2s ease;
+}
+
+.socialLink:hover {
+    color: #007749;
+    transform: translateY(-2px);
+}
+
+.separator {
+    margin: 1rem 0;
+    height: 1px;
+    background-color: #e5e5e5;
+}
+
+.bottomSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logoContainer {
+    max-width: 180px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.copyrightInfo {
+    text-align: right;
+    font-size: 14px;
+    color: #666;
+}
+
+.copyrightInfo p {
+    margin: 0;
+}
+
+.privacyPolicyLink {
+    padding: 1rem 0;
+    font-size: 12px;
+}
+
+.privacyPolicyLink a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.privacyPolicyLink a:hover {
+    color: #007749;
+}
+
+@media (max-width: 768px) {
+    .topSection {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .linksSection {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .socialIcons {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .bottomSection {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .logoContainer {
+        margin: 0 auto;
+    }
+
+    .copyrightInfo {
+        text-align: center;
+    }
+
+    .privacyPolicyLink {
+        text-align: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .linksSection {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .linkColumn {
+        min-width: 100%;
+    }
+}

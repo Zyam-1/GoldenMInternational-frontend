@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap");
+
+.container {
+    font-family: "Barlow", sans-serif;
+    position: relative;
+    width: 100%;
+    padding: 6rem 2rem;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    max-width: 800px;
+    z-index: 2;
+}
+
+/* Title Styles */
+.titleWrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+
+.titleWrapper.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.titleLine {
+    width: 3rem;
+    height: 2px;
+    background-color: #ffc72c; /* Golden yellow color */
+    margin-right: 1rem;
+}
+
+.sectionTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Heading Styles */
+.headingWrapper {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    margin-bottom: 2rem;
+}
+
+.headingWrapper.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mainHeading {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    max-width: 90%;
+}
+
+/* Text Styles */
+.textWrapper {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.textWrapper.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.description {
+    /* font-size: 2rem; */
+    font-weight: 700;
+    line-height: 1.6;
+    max-width: 90%;
+    color: black;
+}
+
+/* Decoration Styles */
+.decoration {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(50px);
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.decoration.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.topTriangle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10rem 10rem 0;
+    border-color: transparent #ffc72c transparent transparent;
+}
+
+.bottomShapes {
+    position: absolute;
+    right: 0;
+    bottom: 6rem;
+    width: 100%;
+    height: 50%;
+}
+
+.greenTriangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10rem 10rem 0 0;
+    border-color: #1e6853 transparent transparent transparent; /* Dark green color */
+}
+
+.yellowRectangle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 10rem;
+    background-color: #ffc72c; /* Golden yellow color */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .mainHeading {
+        font-size: 3rem;
+        max-width: 95%;
+    }
+
+    .decoration {
+        width: 20%;
+    }
+}
+
+@media (max-width: 992px) {
+    .mainHeading {
+        font-size: 2.5rem;
+    }
+
+    .decoration {
+        width: 15%;
+    }
+
+    .topTriangle {
+        border-width: 0 8rem 8rem 0;
+    }
+
+    .greenTriangle {
+        border-width: 8rem 8rem 0 0;
+    }
+
+    .yellowRectangle {
+        height: 8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 4rem 2rem;
+    }
+
+    .mainHeading {
+        font-size: 2rem;
+        max-width: 100%;
+    }
+
+    .description {
+        max-width: 100%;
+    }
+
+    .decoration {
+        width: 12%;
+    }
+
+    .topTriangle {
+        border-width: 0 6rem 6rem 0;
+    }
+
+    .greenTriangle {
+        border-width: 6rem 6rem 0 0;
+    }
+
+    .yellowRectangle {
+        height: 6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 3rem 1.5rem;
+    }
+
+    .mainHeading {
+        font-size: 1.75rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .decoration {
+        width: 10%;
+    }
+
+    .topTriangle {
+        border-width: 0 4rem 4rem 0;
+    }
+
+    .greenTriangle {
+        border-width: 4rem 4rem 0 0;
+    }
+
+    .yellowRectangle {
+        height: 4rem;
+    }
+}

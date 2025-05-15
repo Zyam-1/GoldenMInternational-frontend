@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap");
+
+.container {
+    font-family: "Barlow", sans-serif;
+    max-width: 1200px; /* Reduced from 1400px to create more padding */
+    margin: 6rem auto 0; /* Added top margin for separation */
+    padding: 0 2rem 4rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.projectCard {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    cursor: pointer;
+}
+
+.projectCard.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.imageWrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    aspect-ratio: 4 / 3;
+}
+
+.projectImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.projectCard:hover .projectImage {
+    transform: scale(1.05);
+}
+
+.projectCard:hover .imageOverlay {
+    opacity: 1;
+}
+
+.projectInfo {
+    padding: 1.5rem 0;
+}
+
+.projectTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.projectLocation {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.locationLabel {
+    font-weight: 600;
+}
+
+/* Responsive Styles */
+@media (min-width: 1400px) {
+    .container {
+        padding-left: 100px;
+        padding-right: 100px;
+        max-width: 1400px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        margin-top: 5rem;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projectsGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .container {
+        margin-top: 4rem;
+        padding: 0 1.5rem 3rem; /* Keep the original mobile padding */
+    }
+
+    .projectTitle {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin-top: 3rem;
+    }
+
+    .projectInfo {
+        padding: 1rem 0;
+    }
+}

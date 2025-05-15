@@ -1,0 +1,676 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap");
+
+/* Base Styles */
+.container {
+    font-family: "Barlow", sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.heroSection {
+    height: 70vh;
+    min-height: 500px;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("https://images.pexels.com/photos/1216544/pexels-photo-1216544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.heroSection.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.heroContent {
+    max-width: 800px;
+    padding: 0 2rem;
+    z-index: 2;
+}
+
+.heroTitle {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.heroSubtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.4;
+}
+
+/* Introduction Section */
+.introSection {
+    padding: 6rem 2rem;
+    background-color: white;
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.introSection.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.introContent {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.introHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.accentLine {
+    width: 60px;
+    height: 2px;
+    background-color: #ffcc00;
+    margin-right: 1rem;
+}
+
+.sectionTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #666;
+}
+
+.introParagraph {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 900px;
+}
+
+/* Timeline Section - Completely Revised to match the design */
+.timelineSection {
+    padding: 4rem 0 8rem;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.timelineContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 3rem 0;
+}
+
+/* Timeline center line */
+.timelineLine {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: #ddd;
+    transform: translateX(-50%);
+}
+
+/* Timeline event container */
+.timelineEvent {
+    display: flex;
+    position: relative;
+    margin-bottom: 8rem;
+    min-height: 200px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.timelineEvent.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Timeline year and marker */
+.timelineMarker {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+}
+
+.timelineYear {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.timelineDot {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #ffcc00;
+    border: 4px solid white;
+    box-shadow: 0 0 0 2px #ddd;
+    margin: 0.5rem 0;
+}
+
+.timelineDot.green {
+    background-color: #004d33;
+}
+
+/* Timeline content positioning */
+.timelineContent {
+    width: 45%;
+    position: relative;
+}
+
+.eventLeft .timelineContent {
+    margin-right: auto;
+    text-align: right;
+    padding-right: 3rem;
+}
+
+.eventRight .timelineContent {
+    margin-left: auto;
+    text-align: left;
+    padding-left: 3rem;
+}
+
+/* Timeline image */
+.timelineImageContainer {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.eventLeft .timelineImageContainer {
+    margin-left: auto;
+}
+
+.eventRight .timelineImageContainer {
+    margin-right: auto;
+}
+
+.timelineImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.timelineImageContainer:hover .timelineImage {
+    transform: scale(1.05);
+}
+
+/* Timeline title badge */
+.timelineTitle {
+    display: inline-block;
+    background-color: #ffcc00;
+    color: #333;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.eventLeft .timelineTitle {
+    margin-left: auto;
+}
+
+.eventRight .timelineTitle {
+    margin-right: auto;
+}
+
+.timelineDescription {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 400px;
+}
+
+.eventLeft .timelineDescription {
+    margin-left: auto;
+}
+
+.eventRight .timelineDescription {
+    margin-right: auto;
+}
+
+.moreInfoButton {
+    display: inline-flex;
+    align-items: center;
+    color: #777;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.moreInfoButton:hover {
+    color: #004d33;
+}
+
+.moreInfoIcon {
+    margin-right: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Timeline decorative elements */
+.timelineDecoration {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+}
+
+.eventLeft .timelineDecoration {
+    right: calc(55% + 10px);
+    left: auto;
+}
+
+.eventRight .timelineDecoration {
+    left: calc(55% + 10px);
+    right: auto;
+}
+
+.decorationDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ffcc00;
+    margin: 0 4px;
+}
+
+/* Legacy Section */
+.legacySection {
+    padding: 6rem 2rem;
+    background-color: white;
+}
+
+.legacyContent {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.legacyHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.legacyTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #004d33;
+}
+
+.legacyParagraph {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 900px;
+}
+
+/* Values Section */
+.valuesSection {
+    padding: 6rem 2rem;
+    background-color: #004d33;
+    color: white;
+}
+
+.valuesContent {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.valuesHeader {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.valuesSectionTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.valuesSubtitle {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.valuesGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.valueCard {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.valueCard:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.valueTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.valueDescription {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Quote Section */
+.quoteSection {
+    padding: 6rem 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.quoteContent {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.quote {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+    position: relative;
+    padding: 0 3rem;
+}
+
+.quote::before,
+.quote::after {
+    content: '"';
+    font-size: 4rem;
+    color: #ffcc00;
+    position: absolute;
+    line-height: 1;
+}
+
+.quote::before {
+    left: 0;
+    top: -1rem;
+}
+
+.quote::after {
+    right: 0;
+    bottom: -2rem;
+}
+
+.quoteAuthor {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #004d33;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .valuesGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .timelineContainer {
+        padding: 3rem 2rem;
+    }
+
+    .timelineContent {
+        width: 42%;
+    }
+}
+
+@media (max-width: 992px) {
+    .heroTitle {
+        font-size: 3rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1.25rem;
+    }
+
+    .introParagraph,
+    .legacyParagraph {
+        font-size: 1.1rem;
+    }
+
+    /* Keep timeline centered but adjust spacing */
+    .timelineContent {
+        width: 40%;
+    }
+
+    .eventLeft .timelineContent {
+        padding-right: 2rem;
+    }
+
+    .eventRight .timelineContent {
+        padding-left: 2rem;
+    }
+
+    .timelineImageContainer {
+        max-width: 320px;
+    }
+
+    .legacyTitle,
+    .valuesSectionTitle {
+        font-size: 2rem;
+    }
+
+    .quote {
+        font-size: 1.75rem;
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroSection {
+        min-height: 400px;
+    }
+
+    .heroTitle {
+        font-size: 2.5rem;
+    }
+
+    .introSection,
+    .legacySection,
+    .valuesSection,
+    .quoteSection {
+        padding: 4rem 1.5rem;
+    }
+
+    .timelineSection {
+        padding: 3rem 0 6rem;
+    }
+
+    /* Keep timeline centered for all screen sizes */
+    .timelineEvent {
+        flex-direction: column;
+        margin-bottom: 6rem;
+    }
+
+    .timelineContent {
+        width: 80%;
+        margin: 0 auto !important;
+        text-align: center !important;
+        padding: 0 !important;
+        margin-top: 4rem !important;
+    }
+
+    .timelineImageContainer {
+        margin: 0 auto 1.5rem !important;
+        max-width: 100%;
+    }
+
+    .timelineTitle,
+    .timelineDescription {
+        margin: 0 auto !important;
+        max-width: 100%;
+    }
+
+    .timelineMarker {
+        position: relative;
+        margin-bottom: 1rem;
+    }
+
+    .timelineDecoration {
+        display: none;
+    }
+
+    .timelineYear {
+        font-size: 1.5rem;
+    }
+
+    .timelineDot {
+        width: 20px;
+        height: 20px;
+    }
+
+    .valuesGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .quote {
+        font-size: 1.5rem;
+        padding: 0 1.5rem;
+    }
+
+    .quote::before,
+    .quote::after {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .heroTitle {
+        font-size: 2rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1rem;
+    }
+
+    .accentLine {
+        width: 40px;
+    }
+
+    .sectionTitle {
+        font-size: 0.9rem;
+    }
+
+    .introParagraph,
+    .legacyParagraph {
+        font-size: 1rem;
+    }
+
+    .timelineContent {
+        width: 90%;
+    }
+
+    .timelineYear {
+        font-size: 1.25rem;
+    }
+
+    .timelineDot {
+        width: 16px;
+        height: 16px;
+    }
+
+    .timelineTitle {
+        font-size: 1.1rem;
+    }
+
+    .timelineDescription {
+        font-size: 1rem;
+    }
+
+    .legacyTitle,
+    .valuesSectionTitle {
+        font-size: 1.75rem;
+    }
+
+    .valuesSubtitle {
+        font-size: 1rem;
+    }
+
+    .valueCard {
+        padding: 1.5rem;
+    }
+
+    .valueTitle {
+        font-size: 1.25rem;
+    }
+
+    .quote {
+        font-size: 1.25rem;
+        padding: 0 1rem;
+    }
+
+    .quoteAuthor {
+        font-size: 1rem;
+    }
+}
+
+/* Animation for scroll reveal */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add scroll reveal animation to elements that come into view */
+.timelineEvent.visible,
+.legacySection,
+.valuesSection,
+.quoteSection {
+    animation: fadeInUp 1s ease forwards;
+}

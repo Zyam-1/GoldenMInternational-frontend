@@ -1,0 +1,306 @@
+/* Import Barlow Font */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap");
+
+/* Hero Section */
+.heroContainer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Barlow", sans-serif;
+}
+
+.heroSlide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+    z-index: 1;
+}
+
+.heroSlide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.slideBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.heroSlide.active .slideBackground {
+    animation: zoomEffect 10s ease forwards;
+}
+
+@keyframes zoomEffect {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.contentContainer {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+    padding: 0 10%;
+}
+
+.heroContent {
+    max-width: 800px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+    transition-delay: 0.3s;
+}
+
+.heroContent.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.category {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+
+.category::before {
+    content: "";
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    width: 30px;
+    height: 2px;
+    background-color: #ffcc00;
+    transform: translateY(-50%);
+}
+
+.headline {
+    color: white;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    max-width: 700px;
+}
+
+.ctaContainer {
+    margin-top: 2.5rem;
+}
+
+.ctaButton {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.ctaLine {
+    display: inline-block;
+    width: 50px;
+    height: 1px;
+    background-color: white;
+    margin-left: 15px;
+    position: relative;
+    transition: width 0.3s ease;
+}
+
+.ctaButton:hover .ctaLine {
+    width: 70px;
+}
+
+/* Slide Controls */
+.slideControls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 10%;
+    z-index: 10;
+}
+
+.additionalTextContainer {
+    display: flex;
+    gap: 2rem;
+}
+
+.additionalTextItem {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    position: relative;
+    padding-right: 2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding-top: 10px; /* Space for progress line */
+}
+
+.additionalTextItem:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 1px;
+    height: 16px;
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-50%);
+}
+
+.additionalTextItem:hover {
+    color: #ffcc00;
+}
+
+.additionalTextItem.active {
+    color: #ffcc00;
+}
+
+/* Progress line */
+.progressLine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background-color: #ffcc00;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.pauseButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pauseButtonInner {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffcc00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    transition: background-color 0.3s ease;
+}
+
+.pauseButtonInner:hover {
+    background-color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .headline {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .headline {
+        font-size: 3rem;
+    }
+
+    .contentContainer {
+        padding: 0 8%;
+    }
+
+    .slideControls {
+        padding: 1.5rem 8%;
+    }
+}
+
+@media (max-width: 768px) {
+    .headline {
+        font-size: 2.5rem;
+    }
+
+    .category {
+        font-size: 0.9rem;
+    }
+
+    .contentContainer {
+        padding: 0 5%;
+    }
+
+    .slideControls {
+        padding: 1.5rem 5%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .additionalTextContainer {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .additionalTextItem {
+        padding-right: 1rem;
+    }
+
+    .pauseButton {
+        position: absolute;
+        right: 5%;
+        bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .headline {
+        font-size: 2rem;
+    }
+
+    .category::before {
+        width: 20px;
+        left: -30px;
+    }
+
+    .pauseButton {
+        bottom: 1.5rem;
+    }
+}

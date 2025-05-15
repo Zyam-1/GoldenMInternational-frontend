@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap");
+
+.innovationSection {
+    position: relative;
+    padding: 4rem 0;
+    font-family: "Barlow", sans-serif;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.innovationSection.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.decorativeCorner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.decorativeCorner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 150px 150px 0;
+    border-color: transparent #ffdb4d transparent transparent;
+}
+
+.decorativeCorner::after {
+    content: "";
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 300px;
+    height: 200px;
+    background-color: #ffdb4d;
+    transform: skewY(-25deg);
+    transform-origin: top right;
+}
+
+.heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #000;
+    max-width: 80%;
+}
+
+.paragraph {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #333;
+    max-width: 90%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.paragraph.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .heading {
+        font-size: 2.25rem;
+        max-width: 85%;
+    }
+
+    .decorativeCorner {
+        width: 250px;
+        height: 250px;
+    }
+
+    .decorativeCorner::before {
+        border-width: 0 125px 125px 0;
+    }
+
+    .decorativeCorner::after {
+        top: 60px;
+        width: 250px;
+        height: 170px;
+    }
+}
+
+@media (max-width: 992px) {
+    .heading {
+        font-size: 2rem;
+        max-width: 90%;
+    }
+
+    .paragraph {
+        font-size: 1.05rem;
+        max-width: 95%;
+    }
+
+    .decorativeCorner {
+        width: 200px;
+        height: 200px;
+    }
+
+    .decorativeCorner::before {
+        border-width: 0 100px 100px 0;
+    }
+
+    .decorativeCorner::after {
+        top: 50px;
+        width: 200px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .innovationSection {
+        padding: 3rem 0;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .heading {
+        font-size: 1.75rem;
+        max-width: 100%;
+    }
+
+    .paragraph {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .decorativeCorner {
+        width: 150px;
+        height: 150px;
+    }
+
+    .decorativeCorner::before {
+        border-width: 0 75px 75px 0;
+    }
+
+    .decorativeCorner::after {
+        top: 40px;
+        width: 150px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .innovationSection {
+        padding: 2.5rem 0;
+    }
+
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .paragraph {
+        font-size: 0.95rem;
+    }
+
+    .decorativeCorner {
+        width: 120px;
+        height: 120px;
+    }
+
+    .decorativeCorner::before {
+        border-width: 0 60px 60px 0;
+    }
+
+    .decorativeCorner::after {
+        top: 30px;
+        width: 120px;
+        height: 80px;
+    }
+}
+
+/* Animation for scroll reveal */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap");
+
+.container {
+    font-family: "Barlow", sans-serif;
+    display: flex;
+    max-width: 1200px;
+    margin: 4rem auto;
+    background-color: white;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.imageWrapper {
+    flex: 1;
+    position: relative;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.imageWrapper.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    flex: 1;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(20px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.content.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.category {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #111;
+}
+
+.meta {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.type {
+    font-weight: 500;
+}
+
+.divider {
+    margin: 0 0.5rem;
+}
+
+.date {
+    font-weight: 400;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .container {
+        margin: 3rem auto;
+    }
+
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .content {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin: 2.5rem 1.5rem;
+    }
+}

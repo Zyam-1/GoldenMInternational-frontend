@@ -10,6 +10,29 @@ const translations = {
     careers: "Careers",
     search: "Search",
 
+    //Our HISTORY
+
+    historyEvent1Title: "Humble Beginnings",
+    historyEvent1Desc: "In 2015, the company was founded by a small team of visionaries determined to change the construction game through quality, reliability, and innovation.",
+    historyEvent1Alt: "Construction site in early development",
+
+    historyEvent2Title: "First Major Milestone",
+    historyEvent2Desc: "By 2018, the company had completed its first large-scale commercial project, gaining trust across the region and expanding its operational reach.",
+    historyEvent2Alt: "Completed commercial building",
+
+    historyEvent3Title: "Breaking New Ground",
+    historyEvent3Desc: "2022 marked a shift into modular and prefabricated construction. Investments in DfMA and lean building practices revolutionized the delivery process.",
+    historyEvent3Alt: "Workers installing modular components on site",
+
+    historyEvent4Title: "Innovation Meets Scale",
+    historyEvent4Desc: "In 2024, the company scaled its modular services across Portugal, winning national contracts and partnering with public and private sector clients.",
+    historyEvent4Alt: "Large modular building under assembly",
+
+    historyEvent5Title: "Building the Future Today",
+    historyEvent5Desc: "Today, the company leads in sustainable, modular construction—driven by purpose, powered by technology, and committed to community impact.",
+    historyEvent5Alt: "Modern modular facility with solar panels",
+
+
 
     //Budget Cons Page
     buildingServices: "Building Services",
@@ -461,6 +484,12 @@ const translations = {
 
     buildingService: "Building Service",
 
+    ourHistoryTitle: "Our History",
+    ourHistorySubtitle: "Let's Walk through our company history",
+    ourStoryTitle: "Our Story",
+    ourStoryParagraph1: "Founded in 2015, Golden M International started with a clear vision — to revolutionize the construction industry through quality, innovation, and trust. What began as a small team with big dreams quickly transformed into one of Portugal’s most reliable construction partners, known for its commitment to excellence and client-first approach.",
+    ourStoryParagraph2: "From delivering modular buildings to executing emergency response projects, we've grown by embracing cutting-edge technologies and sustainable methods. Our journey has always been driven by people — our passionate teams, loyal clients, and the communities we serve. Today, we continue to build not just structures, but a legacy of resilience, precision, and purpose.",
+
 
 
 
@@ -609,6 +638,10 @@ const translations = {
     trainingSubtitle: "People, Teams and Labor Solutions",
     trainingDesc: "Golden M International has a strong training and mentorship program that provides craft with the necessary skills to safely and effectively perform their work activities. Training programs are developed based on the individual experience and with the specific nuances for the project in mind. Golden M International also proudly supports a variety of post-secondary and trades schools to assist in promoting the construction sector and providing individuals with the required skills during their apprenticeships.",
 
+    historyQuote: "Building a legacy of excellence, one project at a time.",
+ceoQuote: "Malik Arshad, CEO of Golden M International",
+
+
     // Industrial Execution Page
     industrialExService: "INDUSTRIAL SERVICE",
     industrialExTitle: "Site Execution",
@@ -735,6 +768,24 @@ const translations = {
     safetyTraining: "Comprehensive Safety Training",
     riskManagement: "Proactive Risk Management",
 
+    ourLegacyTitle: "Our Legacy",
+    buildingBetterFuture: "Building a Better Future",
+    legacyParagraph: "Since 2015, Golden M International has been more than just a construction company — we've been a trusted partner in shaping skylines and strengthening communities across Portugal.",
+    ourLegacyText: "Our legacy is built on a foundation of innovation, craftsmanship, and responsibility. From our early projects to our latest modular facilities, every structure we build tells a story of integrity and ambition. As we move forward, we remain committed to building not only for today — but for the generations to come.",
+
+    coreValuesTitle: "Our Core Values",
+    coreValuesSubtitle: "These values guide everything we do — from the smallest decisions to our biggest projects.",
+    honestyTitle: "Honesty",
+    honestyDesc: "We believe in transparency, truthfulness, and doing what’s right — even when no one is watching.",
+    integrityTitle: "Integrity",
+    integrityDesc: "We hold ourselves accountable and stay true to our commitments in every project we undertake.",
+    respectTitle: "Respect",
+    respectDesc: "We value people — our clients, partners, and team — and treat everyone with fairness and dignity.",
+    innovationTitle: "Innovation",
+    innovationDesc: "We embrace modern methods, creative thinking, and continuous improvement to lead in construction excellence.",
+
+
+
     // Main Page - Owners Section
     ownersTitle: "Employee-Owned, Client-Focused",
     ownersDesc: "As an employee-owned company, we are personally invested in your success",
@@ -825,6 +876,8 @@ const translations = {
     fullTimeService: "24/7 Service",
     rapidResponse: "Rapid Response",
     disasterRecovery: "Disaster Recovery",
+
+
 
     // Construction Page
     constructionTitle: "Construction Services",
@@ -1151,6 +1204,30 @@ const translations = {
     applyNow: "Inscreva-se Agora",
     whyWorkWithUs: "Por Que Trabalhar Conosco",
 
+    //Our History
+    historyEvent1Title: "Inícios Humildes",
+    historyEvent1Desc: "Em 2015, a empresa foi fundada por uma pequena equipa de visionários determinada a transformar o setor da construção com qualidade, fiabilidade e inovação.",
+    historyEvent1Alt: "Estaleiro de construção em desenvolvimento inicial",
+
+    historyEvent2Title: "Primeira Grande Conquista",
+    historyEvent2Desc: "Em 2018, a empresa concluiu o seu primeiro grande projeto comercial, ganhando confiança na região e expandindo as suas operações.",
+    historyEvent2Alt: "Edifício comercial concluído",
+
+    historyEvent3Title: "Novos Territórios",
+    historyEvent3Desc: "O ano de 2022 marcou a entrada na construção modular e pré-fabricada. Os investimentos em DfMA e práticas de construção Lean revolucionaram o processo de entrega.",
+    historyEvent3Alt: "Trabalhadores a instalar componentes modulares no local",
+
+    historyEvent4Title: "Inovação em Escala",
+    historyEvent4Desc: "Em 2024, a empresa expandiu os seus serviços modulares por todo o país, ganhando contratos nacionais e parcerias no setor público e privado.",
+    historyEvent4Alt: "Grande edifício modular em montagem",
+
+    historyEvent5Title: "A Construir o Futuro Hoje",
+    historyEvent5Desc: "Atualmente, a empresa lidera na construção modular sustentável — orientada por um propósito, impulsionada pela tecnologia e focada no impacto comunitário.",
+    historyEvent5Alt: "Instalação modular moderna com painéis solares",
+
+    ourHistoryTitle: "A Nossa História",
+
+
     // Career Benefits
     collaborativeCulture: "Cultura Colaborativa",
     collaborativeCultureDesc: "Junte-se a uma equipe que valoriza sua contribuição e promove colaboração em todos os níveis.",
@@ -1171,6 +1248,12 @@ const translations = {
     noPositionFit: "Não vê uma posição que se encaixe nas suas habilidades?",
     submitGeneral: "Enviar uma Aplicação Geral",
 
+    ourHistorySubtitle: "Vamos percorrer a história da nossa empresa",
+    ourStoryTitle: "Nossa História",
+    ourStoryParagraph1: "Fundada em 2015, a Golden M International nasceu com uma visão clara — revolucionar a indústria da construção com qualidade, inovação e confiança. O que começou com uma pequena equipa e grandes sonhos rapidamente se transformou num dos parceiros de construção mais fiáveis de Portugal, reconhecido pelo compromisso com a excelência e a abordagem centrada no cliente.",
+    ourStoryParagraph2: "Desde a entrega de edifícios modulares até à execução de projetos de resposta a emergências, crescemos adotando tecnologias de ponta e métodos sustentáveis. A nossa jornada sempre foi impulsionada por pessoas — as nossas equipas apaixonadas, os clientes fiéis e as comunidades que servimos. Hoje, continuamos a construir não apenas estruturas, mas um legado de resiliência, precisão e propósito.",
+    innovationTitleVal: "Inovação",
+
     // Construction Services Page
     constructionServiceCategory: "SERVIÇO DE CONSTRUÇÃO",
     constructionServiceTitle: "Serviços de Construção",
@@ -1180,6 +1263,10 @@ const translations = {
     serviceOverview: "VISÃO GERAL DO SERVIÇO",
     sustainableConstructionServices: "Serviços de Construção Sustentável na Golden M International",
 
+    historyQuote: "Construindo um legado de excelência, um projeto de cada vez.",
+ceoQuote: "Malik Arshad, CEO da Golden M International",
+
+
     // Construction Services Slides
     pushingIndustryTitle: "Impulsionando a Indústria Adiante",
     servicesSuccessSubtitle: "Serviços para Seu Sucesso",
@@ -1187,6 +1274,11 @@ const translations = {
 
     qualityAssuranceTitle: "Garantia de Qualidade",
     qualityAssuranceDesc: "A cultura de qualidade da Golden M International está incorporada em tudo o que fazemos e começa com a responsabilidade pessoal de nossos funcionários-proprietários. Projetos de qualidade bem-sucedidos demonstram nossa cultura que abraça comunicação clara, forte resolução de problemas e um foco incansável na criação de relacionamentos fortes. Trabalhamos com você desde o início do projeto até a conclusão para garantir que suas expectativas sejam atendidas e o projeto final atenda a todas as suas necessidades.",
+
+    ourLegacyTitle: "O Nosso Legado",
+    buildingBetterFuture: "Construindo um Futuro Melhor",
+    legacyParagraph: "Desde 2015, a Golden M International tem sido mais do que uma empresa de construção — somos um parceiro de confiança na transformação de skylines e no fortalecimento de comunidades em todo Portugal.",
+    ourLegacyText: "O nosso legado é construído sobre inovação, excelência e responsabilidade. Desde os primeiros projetos até as mais recentes instalações modulares, cada estrutura que erguemos conta uma história de integridade e ambição. À medida que avançamos, mantemos o compromisso de construir não apenas para hoje — mas para as gerações futuras.",
 
     leanConstructionTitle: "Design e Construção Enxuta",
     leanConstructionDesc: "Nossa equipe de especialistas em construção é apaixonada por incorporar práticas Lean em nossos projetos, entregando valor insuperável com o mínimo de desperdício, garantindo eficiência de fluxo em tudo o que fazemos. Uma maneira de incorporarmos os princípios Lean é através do Sistema Last Planner®, a técnica de planejamento e programação projetada para promover verdadeira colaboração, consciência e execução bem-sucedida para seu projeto.",
@@ -1520,6 +1612,16 @@ const translations = {
     commitmentsDescription: "Nossos compromissos com segurança, qualidade, sustentabilidade e administração comunitária garantem seu sucesso duradouro.",
 
 
+    coreValuesTitle: "Os Nossos Valores Fundamentais",
+    coreValuesSubtitle: "Estes valores guiam tudo o que fazemos — desde as menores decisões até os maiores projetos.",
+    honestyTitle: "Honestidade",
+    honestyDesc: "Acreditamos na transparência, na verdade e em fazer o que é certo — mesmo quando ninguém está a ver.",
+    integrityTitle: "Integridade",
+    integrityDesc: "Assumimos a responsabilidade e mantemo-nos fiéis aos nossos compromissos em cada projeto.",
+    respectTitle: "Respeito",
+    respectDesc: "Valorizamos as pessoas — os nossos clientes, parceiros e equipa — e tratamos todos com justiça e dignidade.",
+    innovationTitle: "Inovação",
+    innovationDesc: "Adotamos métodos modernos, pensamento criativo e melhoria contínua para liderar em excelência na construção.",
 
 
 

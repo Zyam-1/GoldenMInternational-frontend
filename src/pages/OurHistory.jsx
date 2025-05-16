@@ -111,7 +111,7 @@ const OurHistory = () => {
     },
     {
       id: "event5",
-      year: translations[language].today,
+      year: "Today",
       title: translations[language].historyEvent5Title,
       description: translations[language].historyEvent5Desc,
       image: eventImg6,
@@ -264,7 +264,7 @@ const OurHistory = () => {
                 </p>
               </div>
               <div className={styles.valueCard}>
-                <h3 className={styles.valueTitle}>{translations[language].innovationTitle}</h3>
+                <h3 className={styles.valueTitle}>{translations[language].innovationTitleVal}</h3>
                 <p className={styles.valueDescription}>
                   {translations[language].innovationDesc}
                 </p>

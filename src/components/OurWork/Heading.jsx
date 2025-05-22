@@ -2,11 +2,14 @@
 
 import { useEffect, useRef } from "react";
 import styles from "./Heading.module.css";
+import { translations } from "../../translations/translations";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const Heading = () => {
   const titleRef = useRef(null);
   const headingRef = useRef(null);
   const decorationRef = useRef(null);
+  const { language } = useLanguage();
 
   useEffect(() => {
     // Animation for title with slight delay
@@ -30,13 +33,14 @@ const Heading = () => {
       <div className={styles.content}>
         <div className={styles.titleWrapper} ref={titleRef}>
           <div className={styles.titleLine}></div>
-          <h2 className={styles.sectionTitle}>OUR WORK</h2>
+          <h2 className={styles.sectionTitle}>
+            {translations[language].ourWorkTitle}
+          </h2>
         </div>
 
         <div className={styles.headingWrapper} ref={headingRef}>
           <h3 className={styles.mainHeading}>
-            Building the future of the construction industry, one project at a
-            time
+            {translations[language].ourWorkHeading}
           </h3>
         </div>
       </div>

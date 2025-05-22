@@ -6,10 +6,12 @@ import tabImg3 from "../../images/tab3.png";
 import tabImg4 from "../../images/tab4.png";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { translations } from "../../translations/translations";
+import { useNavigate } from "react-router-dom";
 
 const WhatWeDo2 = () => {
   const { language } = useLanguage();
   const [activeSection, setActiveSection] = useState("buildings");
+  let navigate = useNavigate();
 
   const sections = [
     {
@@ -42,7 +44,8 @@ const WhatWeDo2 = () => {
     },
   ];
 
-  const activeContent = sections.find((section) => section.id === activeSection) || sections[0];
+  const activeContent =
+    sections.find((section) => section.id === activeSection) || sections[0];
 
   const handleSectionChange = (sectionId) => {
     setActiveSection(sectionId);
@@ -53,7 +56,9 @@ const WhatWeDo2 = () => {
       <div className={styles.contentWrapper}>
         <div className={`${styles.header} ${styles.visible}`}>
           <div className={styles.line}></div>
-          <span className={styles.subtitle}>{translations[language]?.whatWeDo2Title}</span>
+          <span className={styles.subtitle}>
+            {translations[language]?.whatWeDo2Title}
+          </span>
         </div>
 
         <h2 className={`${styles.title} ${styles.visible}`}>
@@ -87,8 +92,15 @@ const WhatWeDo2 = () => {
 
           <div className={styles.textContent}>
             <h3 className={styles.contentHeading}>{activeContent.heading}</h3>
-            <p className={styles.contentDescription}>{activeContent.description}</p>
-            <button className={styles.learnMoreButton}>
+            <p className={styles.contentDescription}>
+              {activeContent.description}
+            </p>
+            <button
+              onClick={() => {
+                window.location.href = "/our-work";
+              }}
+              className={styles.learnMoreButton}
+            >
               {translations[language]?.learnMore}
               <span className={styles.arrow}>—</span>
             </button>

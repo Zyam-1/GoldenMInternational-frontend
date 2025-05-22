@@ -12,7 +12,7 @@ import BudgetConsPage from "./pages/BudgetConsPage";
 import PreFabPage from "./pages/PreFabPage";
 import SmartConsPage from "./pages/SmartConsPage";
 import SustainSer from "./pages/SustainSer";
-import ConstructionEff from "./components/BudgetComp/ConstructionEff";
+// import ConstructionEff from "./components/BudgetComp/ConstructionEff";
 import Construction from "./pages/Construction";
 import Emergency from "./pages/Emergency";
 import SelfPerform from "./pages/SelfPerform";
@@ -39,7 +39,11 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" exact element={<Main />}></Route>
-          <Route path="/who-we-are/about" exact element={<AboutUsPage />}></Route>
+          <Route
+            path="/who-we-are/about"
+            exact
+            element={<AboutUsPage />}
+          ></Route>
           <Route path="/our-work" exact element={<OurWork />}></Route>
           <Route path="/insights" exact element={<InsightPage />}></Route>
           <Route path="/our-location" exact element={<OurLocation />}></Route>
@@ -70,7 +74,11 @@ function App() {
             exact
             element={<Construction />}
           ></Route>
-          <Route path="/services/emergency" exact element={<Emergency />}></Route>
+          <Route
+            path="/services/emergency"
+            exact
+            element={<Emergency />}
+          ></Route>
           <Route
             path="/services/self-perform"
             exact
@@ -125,7 +133,7 @@ function App() {
             exact
             element={<OurLeaders />}
           ></Route>
-                    <Route
+          <Route
             path="/who-we-are/history"
             exact
             element={<OurHistory />}
@@ -135,7 +143,11 @@ function App() {
             exact
             element={<InnovPage />}
           ></Route>
-          <Route path="/who-we-are/safety" exact element={<SafetyPage />}></Route>
+          <Route
+            path="/who-we-are/safety"
+            exact
+            element={<SafetyPage />}
+          ></Route>
         </Routes>
       </Router>
     </LanguageProvider>

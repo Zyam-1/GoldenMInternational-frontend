@@ -9,8 +9,11 @@ import Showcase from "../components/ServicesComponents/Showcase";
 import showcaseImage1 from "../images/leadership1.jpg";
 import showcaseImage2 from "../images/leadership2.jpg";
 import showcaseImage3 from "../images/market1.jpg";
+import { translations } from "../translations/translations";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const SafetyPage = () => {
+  const { language } = useLanguage();
   return (
     <div>
       <div>
@@ -19,8 +22,8 @@ const SafetyPage = () => {
           <Hero />
           <InnovSection />
           <Showcase
-            title="Leading the Way"
-            description="We all contribute to the success of Golden M International’s safety program: the executives who instil a strong safety culture, the superintendent who leads the way, the project coordinator who helps trade partners understand our safety practices, the tradesperson who guides young apprentices, and so many more."
+            title={translations[language].showcase1Title}
+            description={translations[language].showcase1Desc}
             imageSrc={showcaseImage1}
             imageAlt="Feature image"
             backgroundColor="white" // Light blue background
@@ -28,8 +31,8 @@ const SafetyPage = () => {
             accentColor="#3182ce" // Blue accent
           />
           <Showcase
-            title="Safety Stats"
-            description="We maintain best in class industry safety with an average of more than 50 million hours worked annually and an overall total recordable incident rate and overall lost-time frequency rate, among the industry's lowest."
+            title={translations[language].showcase2Title}
+            description={translations[language].showcase2Desc}
             imageSrc={showcaseImage2}
             imageAlt="Feature image"
             backgroundColor="white" // Light blue background
@@ -37,8 +40,8 @@ const SafetyPage = () => {
             accentColor="#3182ce" // Blue accent
           />
           <Showcase
-            title="Continuous Improvement"
-            description="We recognize that our people are our most valuable asset, and we are dedicated to providing and maintaining a safe and healthy work environment for all. We’re continuously looking for innovative ways to improve our safety practices and to work with our trade partners to embrace a mindset that is unwilling to compromise when it comes to keeping people safe at work."
+            title={translations[language].showcase3Title}
+            description={translations[language].showcase3Desc}
             imageSrc={showcaseImage3}
             imageAlt="Feature image"
             backgroundColor="white" // Light blue background
@@ -46,10 +49,10 @@ const SafetyPage = () => {
             accentColor="#3182ce" // Blue accent
           />
           <Commitments
-            sectionTitle="Safety at Golden M International"
-            quote="At Golden M International, safety isn’t just a requirement — it’s our responsibility. From blueprint to build, we protect every hand that shapes our vision."
-            personName="Malik Arshad"
-            personTitle="CEO, Golden M International"
+            sectionTitle={translations[language].safetySectionTitle}
+            quote={translations[language].safetyQuote}
+            personName={translations[language].quotePersonName}
+            personTitle={translations[language].quotePersonTitle}
           />
           <CollaborationSection />
 

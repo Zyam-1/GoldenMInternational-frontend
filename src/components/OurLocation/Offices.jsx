@@ -2,12 +2,14 @@
 
 import { useEffect, useRef } from "react";
 import styles from "./Offices.module.css";
-
+import { translations } from "../../translations/translations";
+import { useLanguage } from "../../contexts/LanguageContext";
 const Offices = () => {
   const titleRef = useRef(null);
   const headingRef = useRef(null);
   const textRef = useRef(null);
   const decorationRef = useRef(null);
+  const { language } = useLanguage();
 
   useEffect(() => {
     // Animation for title with slight delay
@@ -36,22 +38,20 @@ const Offices = () => {
       <div className={styles.content}>
         <div className={styles.titleWrapper} ref={titleRef}>
           <div className={styles.titleLine}></div>
-          <h2 className={styles.sectionTitle}>OUR OFFICES</h2>
+          <h2 className={styles.sectionTitle}>
+            {translations[language].officesTitle}
+          </h2>
         </div>
 
         <div className={styles.headingWrapper} ref={headingRef}>
           <h3 className={styles.mainHeading}>
-            Golden M International has offices across Portugal
+            {translations[language].officesHeading}
           </h3>
         </div>
 
         <div className={styles.textWrapper} ref={textRef}>
           <p className={styles.description}>
-            Golden M International maintains a strategic presence throughout
-            Portugal, with offices in major cities and regional centers. Our
-            network enables us to deliver exceptional construction and
-            engineering services nationwide, combining local expertise with
-            global standards to meet the unique needs of each region.
+            {translations[language].officeDesc}
           </p>
         </div>
       </div>

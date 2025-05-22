@@ -77,7 +77,7 @@ const OurHistory = () => {
       image: eventImg1,
       imageAlt: translations[language].historyEvent1Alt,
       dotColor: "yellow",
-      hasMoreInfo: true,
+      hasMoreInfo: false,
     },
     {
       id: "event2",
@@ -97,7 +97,7 @@ const OurHistory = () => {
       image: eventImg3,
       imageAlt: translations[language].historyEvent3Alt,
       dotColor: "yellow",
-      hasMoreInfo: true,
+      hasMoreInfo: false,
     },
     {
       id: "event4",

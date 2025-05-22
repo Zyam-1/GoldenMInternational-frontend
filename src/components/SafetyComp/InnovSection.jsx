@@ -2,11 +2,14 @@
 
 import { useEffect, useRef, useState } from "react";
 import styles from "./InnovSection.module.css";
+import { translations } from "../../translations/translations";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const InnovSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
   const paragraphRefs = useRef([]);
+  const { language } = useLanguage();
 
   // Reset paragraph refs array
   paragraphRefs.current = [];
@@ -56,23 +59,15 @@ const InnovSection = () => {
       <div className={styles.decorativeCorner}></div>
       <div className={styles.container}>
         <h2 className={styles.heading}>
-          Our safety professionals strive to ensure everyone returns home safe
-          at the end of the day.
+          {translations[language].safetyHeading}
         </h2>
 
         <p className={styles.paragraph} ref={addToParagraphRefs}>
-          Safety is at the core of everything we do and is one of our central
-          guiding principles. We promote and foster a culture where people truly
-          care about one another and where everyone shares in our goal of zero
-          incidents.
+          {translations[language].safetyPara1}
         </p>
 
         <p className={styles.paragraph} ref={addToParagraphRefs}>
-          Health, safety and environment focuses on uncompromised safety core
-          values, personal commitment and a passionate belief in achieving zero
-          injuries. We look to achieve this through frontline leadership,
-          positive recognition, safe work behaviors, accountability at all
-          levels and reducing exposure.
+          {translations[language].safetyPara2}
         </p>
       </div>
     </section>

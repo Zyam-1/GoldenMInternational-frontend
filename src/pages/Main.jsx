@@ -9,6 +9,7 @@ import WhatWeBuild from "../components/MainPage/WhatWeBuild";
 import WhatWeDo2 from "../components/MainPage/WhatWeDo2";
 import WhereWeWork from "../components/MainPage/WhereWeWork";
 import WhoAreWe from "../components/MainPage/WhoAreWe";
+import FloatingContact from "../components/MainPage/FloatingContact";
 
 const Main = () => {
   return (
@@ -23,6 +24,12 @@ const Main = () => {
       <SafetySection />
       <CollaborationSection />
       <Footer />
+      <FloatingContact
+        whatsappNumber="+1234567890"
+        email="contact@goldenm.com"
+        whatsappMessage="Hello, I'm interested in your construction services."
+        emailSubject="Inquiry about Golden M International services"
+      />
     </div>
   );
 };

@@ -16,19 +16,35 @@ const OwnersSection = () => {
               <div className={styles.labelLine}></div>
               <span>{translations[language].ownersSectionTitle}</span>
             </div>
-            <h2 className={styles.sectionTitle}>{translations[language].ownersSectionDesc}</h2>
-            <p className={styles.sectionText}>{translations[language].ownershipBenefits}</p>
+            <h2 className={styles.sectionTitle}>
+              {translations[language].ownersSectionDesc}
+            </h2>
+            <p className={styles.sectionText}>
+              {translations[language].ownershipBenefits}
+            </p>
             <div className={styles.learnMore}>
-              <span>{translations[language].learnMore}</span>
+              <span
+                onClick={() => {
+                  window.location.href = "/who-we-are/leadership";
+                }}
+              >
+                {translations[language].learnMore}
+              </span>
               <div className={styles.learnMoreLine}></div>
             </div>
           </div>
           <div className={styles.rightColumn}>
             <div className={styles.profileSection}>
               <div className={styles.profileInfo}>
-                <h3 className={styles.profileName}>{translations[language].employeeOwnership}</h3>
-                <p className={styles.profileTitle}>{translations[language].ownershipCulture}</p>
-                <p className={styles.profileDescription}>{translations[language].ownershipDesc}</p>
+                <h3 className={styles.profileName}>
+                  {translations[language].employeeOwnership}
+                </h3>
+                <p className={styles.profileTitle}>
+                  {translations[language].ownershipCulture}
+                </p>
+                <p className={styles.profileDescription}>
+                  {translations[language].ownershipDesc}
+                </p>
               </div>
               <div className={styles.profileImageContainer}>
                 <img

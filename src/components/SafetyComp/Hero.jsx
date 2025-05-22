@@ -4,6 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import { FaPause, FaPlay } from "react-icons/fa";
 import styles from "./Hero.module.css";
 import imgSlide1 from "../../images/slide2.jpg";
+import { translations } from "../../translations/translations";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const Hero = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -12,11 +14,12 @@ const Hero = () => {
   const [progress, setProgress] = useState(0);
   const timerRef = useRef(null);
   const slideDuration = 5000; // 5 seconds per slide
+  const { language } = useLanguage();
 
   const slides = [
     {
-      category: "Safety",
-      headline: "Safety at Golden M International",
+      category: translations[language].safety,
+      headline: translations[language].safetySectionTitle,
       ctaText: "",
       additionalText: [],
       imageUrl: imgSlide1,

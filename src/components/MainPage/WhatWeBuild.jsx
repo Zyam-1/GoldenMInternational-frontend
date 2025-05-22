@@ -53,13 +53,16 @@ const WhatWeBuild = () => {
   ];
 
   const tabData = getTabData(language);
-  const activeTabContent = tabData.find((tab) => tab.id === activeTab) || tabData[0];
+  const activeTabContent =
+    tabData.find((tab) => tab.id === activeTab) || tabData[0];
 
   return (
     <div className={styles.showcaseContainer}>
       <div className={styles.header}>
         <div className={styles.headerDivider}></div>
-        <h5 className={styles.headerTitle}>{translations[language].whatWeBuildTitle}</h5>
+        <h5 className={styles.headerTitle}>
+          {translations[language].whatWeBuildTitle}
+        </h5>
       </div>
 
       <div className={styles.mainContent}>
@@ -91,7 +94,9 @@ const WhatWeBuild = () => {
 
             <div className={styles.tabContent}>
               <div className={styles.projectInfo}>
-                <h6 className={styles.projectLabel}>{translations[language].projectLabel}</h6>
+                <h6 className={styles.projectLabel}>
+                  {translations[language].projectLabel}
+                </h6>
                 <h3 className={styles.projectTitle}>
                   {activeTabContent.project}
                 </h3>
@@ -101,20 +106,29 @@ const WhatWeBuild = () => {
 
                 <div className={styles.projectMeta}>
                   <div className={styles.metaItem}>
-                    <span className={styles.metaLabel}>{translations[language].locationLabel}</span>
+                    <span className={styles.metaLabel}>
+                      {translations[language].locationLabel}
+                    </span>
                     <span className={styles.metaValue}>
                       {activeTabContent.location}
                     </span>
                   </div>
                   <div className={styles.metaItem}>
-                    <span className={styles.metaLabel}>{translations[language].marketLabel}</span>
+                    <span className={styles.metaLabel}>
+                      {translations[language].marketLabel}
+                    </span>
                     <span className={styles.metaValue}>
                       {activeTabContent.market}
                     </span>
                   </div>
                 </div>
 
-                <button className={styles.learnMoreButton}>
+                <button
+                  onClick={() => {
+                    window.location.href = "/our-work";
+                  }}
+                  className={styles.learnMoreButton}
+                >
                   {translations[language].learnMore}
                 </button>
               </div>

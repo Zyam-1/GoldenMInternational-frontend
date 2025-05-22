@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap");
+
+.floatingContactContainer {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 999;
+    font-family: "Barlow", sans-serif;
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+}
+
+.floatingContactContainer.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contactButton {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.contactButton:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contactButton:active {
+    transform: translateY(-2px) scale(0.98);
+}
+
+.whatsappButton {
+    background-color: #25d366;
+    color: white;
+}
+
+.whatsappButton:hover {
+    background-color: #128c7e;
+}
+
+.emailButton {
+    background-color: #006400;
+    color: white;
+}
+
+.emailButton:hover {
+    background-color: #004d00;
+}
+
+.icon {
+    font-size: 24px;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    right: 70px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.tooltip:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #333;
+}
+
+.contactButton:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    right: 75px;
+}
+
+/* Animation for attention */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 100, 0, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 100, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 100, 0, 0);
+    }
+}
+
+/* Optional pulse animation - uncomment to enable */
+/*
+.contactButton {
+  animation: pulse 2s infinite;
+}
+*/
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .floatingContactContainer {
+        bottom: 20px;
+        right: 20px;
+        gap: 12px;
+    }
+
+    .contactButton {
+        width: 50px;
+        height: 50px;
+    }
+
+    .icon {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .floatingContactContainer {
+        bottom: 15px;
+        right: 15px;
+        gap: 10px;
+    }
+
+    .contactButton {
+        width: 45px;
+        height: 45px;
+    }
+
+    .icon {
+        font-size: 18px;
+    }
+
+    .tooltip {
+        display: none;
+    }
+}

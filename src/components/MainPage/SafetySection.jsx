@@ -20,12 +20,21 @@ const SafetySection = () => {
           </div>
 
           <div className={styles.textContainer}>
-            <h2 className={styles.sectionTitle}>{translations[language].safetyTitle}</h2>
+            <h2 className={styles.sectionTitle}>
+              {translations[language].safetyTitle}
+            </h2>
             <p className={styles.sectionText}>
               {translations[language].safetyText}
             </p>
             <div className={styles.learnMoreContainer}>
-              <button className={styles.learnMoreButton}>{translations[language].safetyLearnMore}</button>
+              <button
+                onClick={() => {
+                  window.location.href = "/who-we-are/safety";
+                }}
+                className={styles.learnMoreButton}
+              >
+                {translations[language].safetyLearnMore}
+              </button>
             </div>
           </div>
         </div>

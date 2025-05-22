@@ -101,6 +101,7 @@ const Navbar = () => {
 
   const handleLanguageChange = (e) => {
     toggleLanguage(e.target.value);
+   window.location.reload();
   };
 
   // Service category content with translations

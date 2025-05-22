@@ -4,11 +4,14 @@ import { useEffect, useRef } from "react";
 // import Image from "next/image";
 import styles from "./Article.module.css";
 import image from "../../images/latest2.jpg";
+import { translations } from "../../translations/translations";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const Article = () => {
   const articleRef = useRef(null);
   const imageRef = useRef(null);
   const contentRef = useRef(null);
+  const { language } = useLanguage();
 
   useEffect(() => {
     // Animation for the entire article
@@ -38,15 +41,18 @@ const Article = () => {
       </div>
 
       <div className={styles.content} ref={contentRef}>
-        <span className={styles.category}>COMPANY NEWS</span>
-        <h2 className={styles.title}>
-          Golden M International Expands Operations in Lisbon, Bringing
-          Commercial Expertise to One of Europe's Fastest-Growing Markets
-        </h2>
+        <span className={styles.category}>
+          {translations[language].compNews}
+        </span>
+        <h2 className={styles.title}>{translations[language].compNewsTitle}</h2>
         <div className={styles.meta}>
-          <span className={styles.type}>News Release</span>
+          <span className={styles.type}>
+            {translations[language].newsRelease}
+          </span>
           <span className={styles.divider}>|</span>
-          <span className={styles.date}>Apr 30, 2025</span>
+          <span className={styles.date}>
+            {translations[language].articleDate}
+          </span>
         </div>
       </div>
     </article>

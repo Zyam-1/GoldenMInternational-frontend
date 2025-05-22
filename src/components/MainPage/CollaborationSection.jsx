@@ -29,10 +29,10 @@ const CollaborationSection = () => {
         window.location.href = "mailto:contact@goldenm.com";
         break;
       case "whatsapp":
-        window.location.href = "https://wa.me/1234567890"; // Replace with actual WhatsApp number
+        window.location.href = "https://wa.me/351920028289"; // Replace with actual WhatsApp number
         break;
       case "phone":
-        window.location.href = "tel:+1234567890"; // Replace with actual phone number
+        window.location.href = "tel:+351920028289"; // Replace with actual phone number
         break;
       default:
         break;

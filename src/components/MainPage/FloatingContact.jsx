@@ -5,7 +5,7 @@ import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import styles from "./FloatingContact.module.css";
 
 const FloatingContact = ({
-  whatsappNumber = "+1234567890", // Default WhatsApp number
+  whatsappNumber = "+351920028289", // Default WhatsApp number
   email = "contact@example.com", // Default email
   whatsappMessage = "Hello, I'd like to inquire about your services.", // Default WhatsApp message
   emailSubject = "Inquiry from Website", // Default email subject

@@ -25,7 +25,7 @@ const Main = () => {
       <CollaborationSection />
       <Footer />
       <FloatingContact
-        whatsappNumber="+1234567890"
+        whatsappNumber="+351920028289"
         email="contact@goldenm.com"
         whatsappMessage="Hello, I'm interested in your construction services."
         emailSubject="Inquiry about Golden M International services"

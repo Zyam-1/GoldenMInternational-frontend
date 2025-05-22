@@ -12,29 +12,32 @@ const WhereWeWork = () => {
   const [dots, setDots] = useState([]);
   const [key, setKey] = useState(0);
 
-  // Debug translations 
+  // Debug translations
   useEffect(() => {
-    console.log('WhereWeWork - Current language:', language);
-    console.log('WhereWeWork - Translations object:', translations[language]);
+    console.log("WhereWeWork - Current language:", language);
+    console.log("WhereWeWork - Translations object:", translations[language]);
   }, [language]);
 
   // Update key when language changes to force re-render
   useEffect(() => {
-    console.log('WhereWeWork - Language changed to:', language);
-    setKey(prev => prev + 1);
+    console.log("WhereWeWork - Language changed to:", language);
+    setKey((prev) => prev + 1);
   }, [language]);
 
   // Define dots with translations using WhatWeBuild style
-  const locationDots = useMemo(() => [
-    { left: "15%", top: "35%", city: translations[language].porto },
-    { left: "30%", top: "37%", city: translations[language].aveiro },
-    { left: "40%", top: "45%", city: translations[language].coimbra },
-    { left: "24%", top: "58%", city: translations[language].lisbon },
-    { left: "25%", top: "45%", city: translations[language].faro },
-    { left: "45%", top: "70%", city: translations[language].evora },
-    { left: "40%", top: "60%", city: translations[language].braga },
-    { left: "52%", top: "65%", city: translations[language].beja },
-  ], [language]);
+  const locationDots = useMemo(
+    () => [
+      { left: "15%", top: "35%", city: translations[language].porto },
+      { left: "30%", top: "37%", city: translations[language].aveiro },
+      { left: "40%", top: "45%", city: translations[language].coimbra },
+      { left: "24%", top: "58%", city: translations[language].lisbon },
+      { left: "25%", top: "45%", city: translations[language].faro },
+      { left: "45%", top: "70%", city: translations[language].evora },
+      { left: "40%", top: "60%", city: translations[language].braga },
+      { left: "52%", top: "65%", city: translations[language].beja },
+    ],
+    [language],
+  );
 
   // Update dots when language changes
   useEffect(() => {
@@ -125,7 +128,12 @@ const WhereWeWork = () => {
             </div>
 
             <div className={styles.buttonWrapper}>
-              <button className={styles.officesButton}>
+              <button
+                onClick={() => {
+                  window.location.href = "/our-location";
+                }}
+                className={styles.officesButton}
+              >
                 {translations[language].viewOffices}
               </button>
               <p className={styles.officesDescription}>

@@ -24,10 +24,10 @@ const FloatingContact = ({
 
   const handleWhatsAppClick = () => {
     // Format the WhatsApp number and message for the URL
-    const formattedNumber = whatsappNumber.replace(/[^0-9]/g, "");
+    // const formattedNumber = whatsappNumber.replace(/[^0-9]/g, "");
     const encodedMessage = encodeURIComponent(whatsappMessage);
     window.open(
-      `https://wa.me/${formattedNumber}?text=${encodedMessage}`,
+      `https://wa.me/${whatsappNumber}?text=${encodedMessage}`,
       "_blank",
     );
   };

@@ -1,70 +1,128 @@
-# Getting Started with Create React App
+# GoldenM Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive web application built with React for GoldenM, featuring a multi-language support system and a sophisticated navigation interface.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- 🌐 Multi-language support (English and Portuguese)
+- 🎨 Modern and responsive design
+- 📱 Mobile-friendly navigation
+- 🔍 Advanced dropdown menus
+- 🏢 Comprehensive service categories
+- 📄 Dynamic content management
+- 🎯 SEO-friendly structure
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React 19.1.0
+- React Router DOM 7.5.3
+- React Icons 5.5.0
+- Bootstrap 5.3.3
+- React Bootstrap 2.10.9
+- Framer Motion 12.6.3
+- Testing Libraries (Jest, React Testing Library)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+```
+src/
+├── components/         # Reusable UI components
+├── contexts/          # React context providers
+├── images/           # Static images and assets
+├── pages/            # Page components
+├── translations/     # Language translation files
+├── App.js           # Main application component
+└── index.js         # Application entry point
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (Latest LTS version recommended)
+- npm or yarn package manager
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
+```bash
+git clone [repository-url]
+cd front-end
+```
 
-### `npm run eject`
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Start the development server:
+```bash
+npm start
+# or
+yarn start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The application will be available at `http://localhost:3000`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Building for Production
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To create a production build:
 
-## Learn More
+```bash
+npm run build
+# or
+yarn build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The build files will be created in the `build/` directory.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Key Features Implementation
 
-### Code Splitting
+### Multi-language Support
+The application implements a language context system that allows seamless switching between English and Portuguese. Language files are stored in the `translations/` directory.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Navigation System
+The navigation system includes:
+- Responsive mobile menu
+- Dropdown menus for Services and Who We Are sections
+- Dynamic service categories
+- Smooth transitions and animations
 
-### Analyzing the Bundle Size
+### Service Categories
+The application features three main service categories:
+- Buildings
+- Civil
+- Industrial
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Each category has its own set of services and descriptions, managed through the translation system.
 
-### Making a Progressive Web App
+## Development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Available Scripts
 
-### Advanced Configuration
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run eject` - Ejects from Create React App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Code Style
 
-### Deployment
+The project follows modern React best practices and uses functional components with hooks. CSS modules are used for styling to ensure component isolation.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contributing
 
-### `npm run build` fails to minify
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+
+This project is proprietary and confidential. All rights reserved.
+
+## Support
+
+For support, please contact the development team or raise an issue in the repository.
